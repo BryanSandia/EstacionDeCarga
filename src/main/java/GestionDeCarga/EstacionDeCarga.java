@@ -1,32 +1,29 @@
 
 package GestionDeCarga;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author Bryan Tacuri
  */
 public class EstacionDeCarga {
-    private vehiculo v;
+   // Agregación: La estación maneja una lista de vehículos
+    private List<VehiculoElectrico> vehiculosRegistrados;
 
-    public vehiculo getV() {
-        return v;
+    public EstacionDeCarga() {
+        this.vehiculosRegistrados = new ArrayList<>();
     }
 
-    public void setV(vehiculo v) {
-        this.v = v;
+    public void registrarVehiculo(VehiculoElectrico v) {
+        vehiculosRegistrados.add(v);
     }
 
-    //metodos
-    public void registrarVehiculo(vehiculo v){
-        // lógica para registrar un vehículo en la estación de carga
-        this.v = v;
-    }
-
-
-    public void suministrarEnergia(vehiculo v){
-        // lógica para suministrar energía a un vehículo
-        double kwh =15; //kwh fijos a entregar
-        v.carga(kwh);
+    public void suministrarEnergia() {
+        double kwhFijos = 15.0;
+        for (VehiculoElectrico v : vehiculosRegistrados) {
+            v.cargar(kwhFijos);
+        }
     }
 
 

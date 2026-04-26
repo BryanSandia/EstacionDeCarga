@@ -5,31 +5,38 @@ package GestionDeCarga;
  * @author Bryan Tacuri
  */
 public class Bateria {
+    private double capacidadMaxima;
     private double capacidadActual;
-    // de 0 a 100
-    private int estadoSalud;
+    private int estadoSalud; // de 0 a 100
 
-
-    public void setCapacidadActual(double capacidadActual) {
+    public Bateria(double capacidadMaxima, double capacidadActual, int estadoSalud) {
+        this.capacidadMaxima = capacidadMaxima;
         this.capacidadActual = capacidadActual;
-    }
-
-    public void setEstadoSalud(int estadoSalud) {
         this.estadoSalud = estadoSalud;
     }
 
-    public double getCapacidadActual() {
-        return capacidadActual;
+    public double getCapacidadActual() { 
+        return capacidadActual; }
+    public void setCapacidadActual(double capacidadActual) { 
+        this.capacidadActual = capacidadActual; 
+    }
+    
+    public double getCapacidadMaxima() { 
+        return capacidadMaxima; 
+    }
+    
+    public int getEstadoSalud() { 
+        return estadoSalud; 
+    }
+    public void setEstadoSalud(int estadoSalud) { 
+        this.estadoSalud = estadoSalud; 
     }
 
-    public int getEstadoSalud() {
-        return estadoSalud;
+    public void usar(double cantidad) {
+        if (this.capacidadActual >= cantidad) {
+            this.capacidadActual -= cantidad;
+        } else {
+            this.capacidadActual = 0;
+        }
     }
-
-    public void usar(double cantidad){
-        // lógica para usar la batería
-        this.capacidadActual -= cantidad;
-    }
-
-
 }
