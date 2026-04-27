@@ -26,10 +26,10 @@ public class RedCarga_Descarga {
         v2.mostrarEstado();
         v3.mostrarEstado();
 
-        System.out.println("\n⚡ Suministrando 15.0 kWh a todos los vehículos en la estación... ⚡\n");
+        System.out.println("\n-|- Suministrando 15.0 kWh a todos los vehiculos en la estacion... -|-\n");
         estacion.suministrarEnergia();
 
-        System.out.println("--- ESTADO DESPUÉS DE LA CARGA MASIVA ---");
+        System.out.println("--- ESTADO DESPUES DE LA CARGA MASIVA ---");
         v1.mostrarEstado();
         v2.mostrarEstado();
         v3.mostrarEstado();

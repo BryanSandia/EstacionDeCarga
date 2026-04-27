@@ -31,9 +31,9 @@ public class VehiculoElectrico {
     }
 
     public void mostrarEstado() {
-        System.out.println("Vehículo: " + marca + " " + modelo);
+        System.out.println("VehIculo: " + marca + " " + modelo);
         System.out.println(" -> Carga actual: " + bateria.getCapacidadActual() + " / " + bateria.getCapacidadMaxima() + " kWh");
-        System.out.println(" -> Salud batería: " + bateria.getEstadoSalud() + "%");
+        System.out.println(" -> Salud baterIa: " + bateria.getEstadoSalud() + "%");
     }
 
    
